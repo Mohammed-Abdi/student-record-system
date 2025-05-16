@@ -60,4 +60,4 @@ gh repo fork Mohammed-Abdi/student-registration-system
 git clone https://github.com/Mohammed-Abdi/student-registration-system.git
 ```
 
-## ✅ Developed And Maintained By **Mohammed Abdi**
+### ✅ Developed And Maintained By **Mohammed Abdi**
