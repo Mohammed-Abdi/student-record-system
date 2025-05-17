@@ -35,7 +35,7 @@ void Register(){
        while(check != NULL){
         
         if(check -> userName == userNameValue){
-            cout << "\n[X] USERNAME TAKEN\n";
+            cout << "\n[X] USERNAME TAKEN\n\n";
             userNameTaken = true;
         }
 
@@ -43,7 +43,7 @@ void Register(){
        }
 
        if(!userNameTaken){
-        cout << "\n[i] USERNAME VALID\n";
+        cout << "\n[i] USERNAME VALID\n\n";
        }
     }
 
@@ -61,7 +61,7 @@ void Register(){
     }
 
     while(true){
-        cout << "\n>> Are you admin? [Y/N]: ";
+        cout << "\n>> ARE YOU ADMIN? [Y/N]: ";
         cin >> checkResponse;
     
         if(checkResponse == "Y" || checkResponse == "y"){
@@ -78,14 +78,16 @@ void Register(){
     
             if(key == adminKey){
                 isAdminValue = true;
-                cout << "\n\n---- [i] PROMOTED TO ADMIN\n[i] REGISTRATION COMPLETED\n";
+                cout << "\n\n[i] PROMOTED TO ADMIN\n[i] REGISTRATION COMPLETED\n";
                 break;
             } else{
                 isAdminValue = false;
                 if(attempt > 1){
                     cout << "\n\n[INCORRECT] " << attempt - 1 << " " << isPlural  << " LEFT\n\n";
                 } else {
-                    cout << "\n[!] YOU ARE NOT ADMIN!\n";
+                    cout << "\n[!] YOU ARE NOT ADMIN!" 
+                         << "\n[i] PROMOTED TO STUDENT BY DEFAULT"
+                         << "\n[i] REGISTRATION COMPLETED\n\n";
                 }
             }
             attempt--;
@@ -93,10 +95,10 @@ void Register(){
             break;
         } else if (checkResponse == "N" || checkResponse == "n"){
             isAdminValue = false;
-            cout << "\n[i] PROMOTED TO STUDENT\n[i] REGISTRATION COMPLETED\n";
+            cout << "\n[i] PROMOTED TO STUDENT\n[i] REGISTRATION COMPLETED\n\n";
             break;
         } else {
-            cout << "\n[X] INPUT INVALID\n";
+            cout << "\n[X] INPUT INVALID\n\n";
         }
     }
 
