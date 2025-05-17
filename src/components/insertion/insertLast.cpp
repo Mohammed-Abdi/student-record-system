@@ -39,8 +39,8 @@ void insertLast(){
 
     if(start == NULL){
         start = temp;
-        temp -> pre = NULL;
-        temp -> next = NULL;
+        start -> pre = NULL;
+        start -> next = NULL;
     } else {
         struct student *pointer = start;
 

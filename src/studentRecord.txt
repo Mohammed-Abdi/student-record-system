@@ -1,16 +1,9 @@
-Eman
+Mohammed
 Abdi
 Tahir
-DDU1600555
-18
-3.8
-Graphics design
-Samuel
-Solomon
-Shiferaw
-DDU1600644
-21
-3.9
+DDU1600554
+22
+3.95
 Software Engineering
 Abdurehman
 Abdallad
@@ -19,10 +12,17 @@ DDU1600032
 20
 3.9
 Computer Science
-Mohammed
+Samuel
+Solomon
+Shiferaw
+DDU1600644
+21
+3.9
+Software Engineering
+Eman
 Abdi
 Tahir
-DDU1600554
-22
-3.95
-Software Engineering
+DDU1600555
+18
+3.8
+Graphics design

@@ -39,8 +39,8 @@ void insertFirst(){
 
     if(start == NULL){
         start = temp;
-        temp -> pre = NULL;
-        temp -> next = NULL;
+        start -> pre = NULL;
+        start -> next = NULL;
     } else {
         start -> pre = temp;
         temp -> next = start;
