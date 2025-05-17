@@ -35,7 +35,7 @@ void Register(){
        while(check != NULL){
         
         if(check -> userName == userNameValue){
-            cout << "\n[X] USERNAME TAKEN\n\n";
+            cout << "\n[X] USERNAME IS ALREADY TAKEN\n\n";
             userNameTaken = true;
         }
 
@@ -43,7 +43,7 @@ void Register(){
        }
 
        if(!userNameTaken){
-        cout << "\n[i] USERNAME VALID\n\n";
+        cout << "\n[i] USERNAME IS AVAILABLE\n\n";
        }
     }
 

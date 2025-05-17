@@ -4,10 +4,8 @@
 #include "recordFile/recordFile.cpp"
 void updateMenu(){
     string choice;
-    do{
         if(start == NULL){
             cout << "\n[X] THERE IS NO STUDENT RECORDS TO SEARCH!\n\n";
-            break;
         } else {
             bool isFound = false;
             string target;
@@ -23,19 +21,22 @@ void updateMenu(){
 
                     string newFirstNameValue, newMiddleNameValue, newLastNameValue, newIdValue, newDepartmentValue;
                     int newAgeValue;
+                    float newGpaValue;
 
                     do{
                         cout << "\n------------------------------------\n"
                              << "-> NAME : " << current -> firstName << " " << current -> middleName << " "<< current -> lastName << "\n"
                              << "-> AGE  : " << current -> age << "\n"
                              << "-> ID   : " << current -> id << "\n"
+                             << "-> GPA   : " << current -> gpa << "\n"
                              << "-> DEP  : " << current -> department << "\n"
                              << "------------------------------------\n"
                              << "1. UPDATE NAME\n"
                              << "2. UPDATE AGE\n"
                              << "3. UPDATE ID\n"
-                             << "4. UPDATE DEPARTMENT\n"
-                             << "5. BACK\n\n>> CHOOSE [1-5]: ";
+                             << "4. UPDATE GPA\n"
+                             << "5. UPDATE DEPARTMENT\n"
+                             << "6. BACK\n\n>> CHOOSE [1-6]: ";
                         cin >> choice;
                         cout << "------------------------------------\n\n";
 
@@ -69,6 +70,13 @@ void updateMenu(){
                             saveStudents();
 
                         } else if(choice == "4"){
+                            cout << ">> UPDATE GPA: ";
+                            cin >> newGpaValue;
+                            current -> gpa = newGpaValue;
+
+                            saveStudents();
+
+                        } else if(choice == "5"){
                             cout << ">> UPDATE DEPARTMENT: ";
                             cin.ignore();
                             getline(cin, newDepartmentValue);
@@ -76,13 +84,13 @@ void updateMenu(){
 
                             saveStudents();
 
-                        } else if(choice == "5"){
+                        } else if(choice == "6"){
                             cout << "\n[i] STUDENT INFO UPDATED SUCCESSFULLY!"
                                  << "\n[<] REDIRECTING TO HOMEPAGE...\n\n";
                         } else {
                             cout << "\n[X] THERE IS NO OPTION \"" << choice << "\"\n";
                         }
-                    } while(choice != "5");
+                    } while(choice != "6");
 
                     break; 
                 }
@@ -93,7 +101,6 @@ void updateMenu(){
                 cout << "\n[X] THERE IS NO STUDENT WITH ID [" << target << "]!\n\n";
             }
         }
-    } while(choice != "5");
 }
 
 #endif
